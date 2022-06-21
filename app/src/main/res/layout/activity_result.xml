@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/padi"
+                android:padding="10dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back_bg"
+                    android:layout_gravity="left"
+                    android:id="@+id/back1"
+                    />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgResult"
+                android:background="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="205dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                />
+            <!--        android:adjustViewBounds="true"-->
+            <!--        android:scaleType="fitXY"-->
+            <!--        android:visibility="gone"-->
+            <!--        tools:ignore="VectorDrawableCompat" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/namahama"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-black"
+                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perkenalan Singkat : "
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/perkenalan"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Penanganan             : "
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/penanganan"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/back2"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_btn"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:layout_marginTop="30dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
