@@ -1,3 +1,6 @@
+#Adi Sangjaya (19090019)
+
+
 from bson import decode
 import keras
 import numpy as np
