@@ -1,5 +1,5 @@
-#Adi Sangjaya (19090019)
-#Moh Farid Nurul Ikhsani (19090121)
+# 6A 19090019 Adi Sangjaya 
+# 6A 19090121 Moh Farid Nurul Ikhsani 
 
 
 from bson import decode
