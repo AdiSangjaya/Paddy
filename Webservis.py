@@ -1,7 +1,6 @@
 # 6A 19090019 Adi Sangjaya 
 # 6A 19090121 Moh Farid Nurul Ikhsani 
 
-
 from bson import decode
 import keras
 import numpy as np
@@ -198,28 +197,28 @@ def datahama():
     data = db['hama'].find({})
     return render_template('datahama.html', datahama = data)
 
+#tambah Data
+#@app.route('/tambahData')
+#def tambahData():
 
-@app.route('/tambahData')
-def tambahData():
-
-    return render_template('tambahData.html')
+    #return render_template('tambahData.html')
 
 #roses memasukan data hama ke database
-@app.route('/daftarhama', methods=["POST"])
-def daftarhama():
-    if request.method == "POST":
-        nama_hama = request.form['nama_hama']
-        perkenalan = request.form['perkenalan']
-        penanganan = request.form['penanganan']
-        if not re.match(r'[A-Za-z]+', nama_hama):
-            flash("Nama harus pakai huruf Dong!")
+#@app.route('/daftarhama', methods=["POST"])
+#def daftarhama():
+#    if request.method == "POST":
+#        nama_hama = request.form['nama_hama']
+#        perkenalan = request.form['perkenalan']
+#        penanganan = request.form['penanganan']
+#        if not re.match(r'[A-Za-z]+', nama_hama):
+#            flash("Nama harus pakai huruf Dong!")
         
-        else:
-            db.hama.insert_one({'nama_hama': nama_hama, 'perkenalan': perkenalan, 'penanganan':penanganan})
-            flash('Data Hama berhasil ditambah')
-            return redirect(url_for('datahama'))
+#        else:
+#            db.hama.insert_one({'nama_hama': nama_hama, 'perkenalan': perkenalan, 'penanganan':penanganan})
+#            flash('Data Hama berhasil ditambah')
+#            return redirect(url_for('datahama'))
 
-    return render_template("tambahData.html")
+#    return render_template("tambahData.html")
 
 @app.route('/edithama/<nama_hama>', methods = ['POST', 'GET'])
 def edithama(nama_hama):
@@ -250,12 +249,13 @@ def updathama(nama_hama):
 
     return render_template("datahama.html")
 
+#menampilkan riwayat
 @app.route('/riwayat')
 def riwayat():
     dataRiwayat = db['riwayat'].find({})
     print(dataRiwayat)
     return render_template('riwayat.html',riwayat  = dataRiwayat)
-
+#hapus riwayat
 @app.route('/hapusRiwayat/<nama_file>', methods = ['POST','GET'])
 def hapusRiwayat(nama_file):
   
